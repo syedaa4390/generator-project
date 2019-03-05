@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>index.html</title>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  
+  <script> //custom jQuery (own jQuery/javaSrcipt) 
+      $(function(){
+        
+        $('button').click(function(){
+         
+        var color = $('#color').val();  // get the color from the same input box
+        
+        $('h3, h1, h4, input').slideUp( "slow", function() { //makes all the h1, h3, h4, and input values slide up as it leaves the screen
+          });
+          
+        var name = $('#name').val();
+          
+        var pet = $('#pet').val();
+        
+        var birthday = $('#birthday').val();
+          
+        var name2 = $('#name2').val();
+          
+        var birthYear = $('#birthYear').val();
+       
+        $('body').css('background', color);  // sets the background to whatever was inputted for color
+          
+        var adoption = "CONGRATULATIONS " + name2 + " ON THE ADOPTION OF " + name + "! This " + pet + " is a great addition to your family! " + name + " was born on " + birthday + ", and loves the color " + color + "! You, " + name2 + ", born in " + birthYear + ", will be a great caretaker for " + name + "! ENJOYYY!!!";
+        
+        $('p').html(adoption);
+        
+        
+      });
+      
+    });
+      
+  </script>
+  
+  <style>
+      
+      body {
+        background: linear-gradient(-90deg, violet, pink);
+      }
+      
+      h3 {
+        text-align: center;
+        font-size: 40px
+      }
+      
+      h1 {
+        text-align: center;
+        font-size: 50px;
+      }
+      
+      h4 {
+        text-align: center;
+        font-size: 20px;
+      }
+      
+      p {
+        text-align: center;
+      }
+      
+      button {
+        text-align: center;
+      }
+      
+      .adoption {
+        font-size: 30px;
+      }
+      
+    </style>
+  
+  </head>
+  <body>
+  
+  <h1>ADOPT A PETTT!!!</h1>
+  
+  <h3>Pet Info:</h3>
+  <h4>Type of Pet: <input id="pet"><br></h4>
+  <h4>Chosen Name: <input id="name"><br></h4>
+  <h4>Birthday: <input id="birthday"><br> (Write it like so: month, date, year)</h4>
+  <h4>Color of choice: <input id="color"><br></h4>
+
+  <h3>Caretaker Info:</h3>
+  <h4>Name: <input id="name2"><br></h4>
+  <h4>Birth Year: <input id="birthYear"><br></h4>
+    
+  <button>ADOPT!</button>
+    
+  <p></p>
+  
+  </body>
+</html>
